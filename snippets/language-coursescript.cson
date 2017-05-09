@@ -76,13 +76,20 @@
       Audio(question=true): $2
       Audio(matching=true): $3
     """
+     'MCQ5':
+    'prefix': 'mcq5'
+    'body': """
+      [TYPE MCQ5][${1:true}]
+      Audio: $2
+      Pic: $3
+    """
   'Sequencing':
     'prefix': 'seq'
     'body': """
       [TYPE Sequencing]
-      Text: $1
-      Text: $2
-      Text: $3
+      Audio: $1
+      Audio: $2
+      Audio: $3
     """
   'RP':
     'prefix': 'rp'
@@ -238,8 +245,8 @@
       [TYPE MCP1]
       Audio: $1
       Opts:
-        Text: $2
-        Text: $3
+        Pic: $2
+        Pic: $3
         Pic(checked=true): $4
       TR: $5
     """
